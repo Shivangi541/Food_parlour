@@ -59,12 +59,13 @@ const Body = () => {
         <button>Search</button>
       </div>
       <div className="restaurant-list">
-        <div className="restaurant-card">
-          <Rest_card />
-          <Rest_card />
-          <Rest_card />
-          <Rest_card />
-        </div>
+        <Rest_card />
+        <Rest_card />
+        <Rest_card />
+        <Rest_card />
+        <Rest_card />
+        <Rest_card />
+        <Rest_card />
       </div>
     </div>
   );

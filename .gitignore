@@ -1,3 +1,4 @@
 node_modules
-dist
-.parcel-cache
+# Parcel build and cache
+dist/
+.parcel-cache/
