@@ -1,0 +1,28 @@
+{
+  "name": "food-orderingapp",
+  "version": "1.0.0",
+  "description": "Food ordering app using REACT",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shivangi541/Food_parlour.git"
+  },
+  "keywords": [
+    "food-ordering",
+    "react",
+    "frontend"
+  ],
+  "author": "SHIVANGI DUTTA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shivangi541/Food_parlour/issues"
+  },
+  "homepage": "https://github.com/Shivangi541/Food_parlour#readme",
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  }
+}
