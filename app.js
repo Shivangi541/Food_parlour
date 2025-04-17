@@ -35,7 +35,8 @@ const Header = () => {
 };
 
 // card component
-const Rest_card = () => {
+const Rest_card = (props) => {
+  console.log(props);
   return (
     <div>
       <div className="card">
@@ -44,9 +45,10 @@ const Rest_card = () => {
           src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/1/11/40a20a8d-ec42-461a-b83c-cf8903a69f31_674917.jpg"
           alt="Cakes"
         ></img>
-        <h3>Mio Amore</h3>
-        <p>Cake Shop</p>
-        <p>Rating: 4.5</p>
+        <h3>{props.resName}</h3>
+        <p>{props.cuisine}</p>
+        <p>{props.rating}</p>
+        <p>{props.eta}</p>
       </div>
     </div>
   );
@@ -59,7 +61,13 @@ const Body = () => {
         <button>Search</button>
       </div>
       <div className="restaurant-list">
-        <Rest_card />
+        <Rest_card
+          resName="Cakes"
+          cuisine="bakery"
+          rating="4.5"
+          eta="3- mins"
+        />
+        <Rest_card resName="Baskin Robbins" cuisine="ice-cream" rating="5.0" />
         <Rest_card />
         <Rest_card />
         <Rest_card />
