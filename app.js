@@ -34,9 +34,92 @@ const Header = () => {
   );
 };
 
+const resObj = {
+  info: {
+    id: "10365",
+    name: "Pizza Hut",
+    cloudinaryImageId:
+      "RX_THUMBNAIL/IMAGES/VENDOR/2025/4/9/e9e0022b-4d44-4bd5-a0a5-6ae98e9745d6_10365.jpg",
+    locality: "CC1 (57)",
+    areaName: "Bidhannagar",
+    costForTwo: "₹350 for two",
+    cuisines: ["Pizzas"],
+    avgRating: 4.2,
+    parentId: "721",
+    avgRatingString: "4.2",
+    totalRatingsString: "10K+",
+    sla: {
+      deliveryTime: 32,
+      lastMileTravel: 1.5,
+      serviceability: "SERVICEABLE",
+      slaString: "30-35 mins",
+      lastMileTravelString: "1.5 km",
+      iconType: "ICON_TYPE_EMPTY",
+    },
+    availability: {
+      nextCloseTime: "2025-04-17 23:00:00",
+      opened: true,
+    },
+    badges: {
+      imageBadges: [
+        {
+          imageId: "Rxawards/_CATEGORY-Pizza.png",
+          description: "Delivery!",
+        },
+      ],
+    },
+    isOpen: true,
+    type: "F",
+    badgesV2: {
+      entityBadges: {
+        imageBased: {
+          badgeObject: [
+            {
+              attributes: {
+                description: "Delivery!",
+                imageId: "Rxawards/_CATEGORY-Pizza.png",
+              },
+            },
+          ],
+        },
+        textBased: {},
+        textExtendedBadges: {},
+      },
+    },
+    aggregatedDiscountInfoV3: {
+      header: "ITEMS",
+      subHeader: "AT ₹79",
+    },
+    differentiatedUi: {
+      displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      differentiatedUiMediaDetails: {
+        lottie: {},
+        video: {},
+      },
+    },
+    reviewsSummary: {},
+    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    restaurantOfferPresentationInfo: {},
+    externalRatings: {
+      aggregatedRating: {
+        rating: "--",
+      },
+    },
+    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+  },
+  analytics: {
+    context: "seo-data-b3622b87-296b-4975-a39e-40214b704514",
+  },
+  cta: {
+    link: "https://www.swiggy.com/city/kolkata/pizza-hut-cc1-57-bidhannagar-rest10365",
+    type: "WEBLINK",
+  },
+};
+
 // card component
 const Rest_card = (props) => {
-  console.log(props);
+  const { resObj } = props;
+  console.log(resObj);
   return (
     <div>
       <div className="card">
@@ -45,10 +128,10 @@ const Rest_card = (props) => {
           src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/1/11/40a20a8d-ec42-461a-b83c-cf8903a69f31_674917.jpg"
           alt="Cakes"
         ></img>
-        <h3>{props.resName}</h3>
-        <p>{props.cuisine}</p>
-        <p>{props.rating}</p>
-        <p>{props.eta}</p>
+        <h3>{resObj.data.name}</h3>
+        <p>{resObj.data.cuisines}</p>
+        <p>{resObj.data.avgRating}</p>
+        <p>{resObj.data.locality}</p>
       </div>
     </div>
   );
@@ -61,12 +144,7 @@ const Body = () => {
         <button>Search</button>
       </div>
       <div className="restaurant-list">
-        <Rest_card
-          resName="Cakes"
-          cuisine="bakery"
-          rating="4.5"
-          eta="3- mins"
-        />
+        <Rest_card resObj={resObj} />
         <Rest_card resName="Baskin Robbins" cuisine="ice-cream" rating="5.0" />
         <Rest_card />
         <Rest_card />
