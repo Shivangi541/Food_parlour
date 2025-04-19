@@ -128,10 +128,14 @@ const Rest_card = (props) => {
           src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/1/11/40a20a8d-ec42-461a-b83c-cf8903a69f31_674917.jpg"
           alt="Cakes"
         ></img>
-        <h3>{resObj.data.name}</h3>
-        <p>{resObj.data.cuisines}</p>
-        <p>{resObj.data.avgRating}</p>
-        <p>{resObj.data.locality}</p>
+        {resObj && (
+          <div>
+            <h2>{resObj.info.name}</h2>
+            <h3>{resObj.info.cuisines.join(", ")}</h3>
+            <h4>{resObj.info.avgRating} stars</h4>
+            <h5>{resObj.info.costForTwo}</h5>
+          </div>
+        )}
       </div>
     </div>
   );
