@@ -234,8 +234,8 @@ const Body = () => {
         <button>Search</button>
       </div>
       <div className="restaurant-list">
-        {resObj.map((retaurantcard) => (
-          <RestCard resObj={retaurantcard} />
+        {resObj.map((restaurantcard) => (
+          <RestCard key={restaurantcard.info.id} resObj={restaurantcard} />
         ))}
       </div>
     </div>
