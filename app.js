@@ -33,113 +33,199 @@ const Header = () => {
     </div>
   );
 };
-
-const resObj = {
-  info: {
-    id: "10365",
-    name: "Pizza Hut",
-    cloudinaryImageId:
-      "RX_THUMBNAIL/IMAGES/VENDOR/2025/4/9/e9e0022b-4d44-4bd5-a0a5-6ae98e9745d6_10365.jpg",
-    locality: "CC1 (57)",
-    areaName: "Bidhannagar",
-    costForTwo: "₹350 for two",
-    cuisines: ["Pizzas"],
-    avgRating: 4.2,
-    parentId: "721",
-    avgRatingString: "4.2",
-    totalRatingsString: "10K+",
-    sla: {
-      deliveryTime: 32,
-      lastMileTravel: 1.5,
-      serviceability: "SERVICEABLE",
-      slaString: "30-35 mins",
-      lastMileTravelString: "1.5 km",
-      iconType: "ICON_TYPE_EMPTY",
-    },
-    availability: {
-      nextCloseTime: "2025-04-17 23:00:00",
-      opened: true,
-    },
-    badges: {
-      imageBadges: [
-        {
-          imageId: "Rxawards/_CATEGORY-Pizza.png",
-          description: "Delivery!",
-        },
-      ],
-    },
-    isOpen: true,
-    type: "F",
-    badgesV2: {
-      entityBadges: {
-        imageBased: {
-          badgeObject: [
-            {
-              attributes: {
-                description: "Delivery!",
-                imageId: "Rxawards/_CATEGORY-Pizza.png",
+//lisst of objects
+const resObj = [
+  {
+    info: {
+      id: "10365",
+      name: "Pizza Hut",
+      cloudinaryImageId:
+        "RX_THUMBNAIL/IMAGES/VENDOR/2025/4/9/e9e0022b-4d44-4bd5-a0a5-6ae98e9745d6_10365.jpg",
+      locality: "CC1 (57)",
+      areaName: "Bidhannagar",
+      costForTwo: "₹350 for two",
+      cuisines: ["Pizzas"],
+      avgRating: 4.2,
+      parentId: "721",
+      avgRatingString: "4.2",
+      totalRatingsString: "10K+",
+      sla: {
+        deliveryTime: 32,
+        lastMileTravel: 1.5,
+        serviceability: "SERVICEABLE",
+        slaString: "30-35 mins",
+        lastMileTravelString: "1.5 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2025-04-17 23:00:00",
+        opened: true,
+      },
+      badges: {
+        imageBadges: [
+          {
+            imageId: "Rxawards/_CATEGORY-Pizza.png",
+            description: "Delivery!",
+          },
+        ],
+      },
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {
+            badgeObject: [
+              {
+                attributes: {
+                  description: "Delivery!",
+                  imageId: "Rxawards/_CATEGORY-Pizza.png",
+                },
               },
-            },
-          ],
+            ],
+          },
+          textBased: {},
+          textExtendedBadges: {},
         },
-        textBased: {},
-        textExtendedBadges: {},
       },
-    },
-    aggregatedDiscountInfoV3: {
-      header: "ITEMS",
-      subHeader: "AT ₹79",
-    },
-    differentiatedUi: {
-      displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-      differentiatedUiMediaDetails: {
-        lottie: {},
-        video: {},
+      aggregatedDiscountInfoV3: {
+        header: "ITEMS",
+        subHeader: "AT ₹79",
       },
-    },
-    reviewsSummary: {},
-    displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-    restaurantOfferPresentationInfo: {},
-    externalRatings: {
-      aggregatedRating: {
-        rating: "--",
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          lottie: {},
+          video: {},
+        },
       },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "--",
+        },
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
     },
-    ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    analytics: {
+      context: "seo-data-b3622b87-296b-4975-a39e-40214b704514",
+    },
+    cta: {
+      link: "https://www.swiggy.com/city/kolkata/pizza-hut-cc1-57-bidhannagar-rest10365",
+      type: "WEBLINK",
+    },
   },
-  analytics: {
-    context: "seo-data-b3622b87-296b-4975-a39e-40214b704514",
+  {
+    info: {
+      id: "240184",
+      name: "Burger King",
+      cloudinaryImageId:
+        "RX_THUMBNAIL/IMAGES/VENDOR/2025/3/24/d752b087-d4be-483b-a45b-305ff00556e6_240184.jpg",
+      locality: "Bidhannagar",
+      areaName: "Salt Lake",
+      costForTwo: "₹350 for two",
+      cuisines: ["Burgers", "American"],
+      avgRating: 4.5,
+      parentId: "166",
+      avgRatingString: "4.5",
+      totalRatingsString: "30K+",
+      sla: {
+        deliveryTime: 33,
+        lastMileTravel: 1.7,
+        serviceability: "SERVICEABLE",
+        slaString: "30-35 mins",
+        lastMileTravelString: "1.7 km",
+        iconType: "ICON_TYPE_EMPTY",
+      },
+      availability: {
+        nextCloseTime: "2025-04-22 00:00:00",
+        opened: true,
+      },
+      badges: {
+        imageBadges: [
+          {
+            imageId: "bolt/bolt%206.png",
+            description: "bolt!",
+          },
+        ],
+      },
+      isOpen: true,
+      type: "F",
+      badgesV2: {
+        entityBadges: {
+          imageBased: {
+            badgeObject: [
+              {
+                attributes: {
+                  description: "bolt!",
+                  imageId: "bolt/bolt%206.png",
+                },
+              },
+            ],
+          },
+          textBased: {},
+          textExtendedBadges: {},
+        },
+      },
+      aggregatedDiscountInfoV3: {
+        header: "60% OFF",
+        subHeader: "UPTO ₹120",
+      },
+      differentiatedUi: {
+        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        differentiatedUiMediaDetails: {
+          lottie: {},
+          video: {},
+        },
+      },
+      reviewsSummary: {},
+      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+      restaurantOfferPresentationInfo: {},
+      externalRatings: {
+        aggregatedRating: {
+          rating: "4.5",
+          ratingCount: "3.0K+",
+        },
+        source: "GOOGLE",
+        sourceIconImageId: "v1704440323/google_ratings/rating_google_tag",
+      },
+      ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+    },
+    analytics: {
+      context: "seo-data-52e8b7cf-8779-42e6-877d-1f509caede47",
+    },
+    cta: {
+      link: "https://www.swiggy.com/city/kolkata/burger-king-bidhannagar-salt-lake-rest240184",
+      type: "WEBLINK",
+    },
   },
-  cta: {
-    link: "https://www.swiggy.com/city/kolkata/pizza-hut-cc1-57-bidhannagar-rest10365",
-    type: "WEBLINK",
-  },
-};
+];
 
-// card component
-const Rest_card = (props) => {
-  const { resObj } = props;
-  console.log(resObj);
+const RestCard = ({ resObj }) => {
+  if (!resObj) return null;
+
+  const {
+    info: { name, cuisines, avgRating, costForTwo },
+  } = resObj;
+
   return (
-    <div>
-      <div className="card">
-        <img
-          className="card-image"
-          src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/1/11/40a20a8d-ec42-461a-b83c-cf8903a69f31_674917.jpg"
-          alt="Cakes"
-        ></img>
-        {resObj && (
-          <div>
-            <h2>{resObj.info.name}</h2>
-            <h3>{resObj.info.cuisines.join(", ")}</h3>
-            <h4>{resObj.info.avgRating} stars</h4>
-            <h5>{resObj.info.costForTwo}</h5>
-          </div>
-        )}
+    <div className="card">
+      <img
+        className="card-image"
+        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/1/11/40a20a8d-ec42-461a-b83c-cf8903a69f31_674917.jpg"
+        alt="Cakes"
+      />
+      <div>
+        <h2>{name}</h2>
+        <h3>{cuisines.join(", ")}</h3>
+        <h4>{avgRating} stars</h4>
+        <h5>{costForTwo}</h5>
       </div>
     </div>
   );
 };
+
 const Body = () => {
   return (
     <div className="body">
@@ -148,14 +234,9 @@ const Body = () => {
         <button>Search</button>
       </div>
       <div className="restaurant-list">
-        <Rest_card resObj={resObj} />
-        <Rest_card resName="Baskin Robbins" cuisine="ice-cream" rating="5.0" />
-        <Rest_card />
-        <Rest_card />
-        <Rest_card />
-        <Rest_card />
-        <Rest_card />
-        <Rest_card />
+        {resObj.map((retaurantcard) => (
+          <RestCard resObj={retaurantcard} />
+        ))}
       </div>
     </div>
   );
