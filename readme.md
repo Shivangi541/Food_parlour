@@ -1,5 +1,5 @@
  MockUp of the project
-import logo from "./assets/logo.jpg";
+
 
 - Components of the app
 - - Header: The header of the app
