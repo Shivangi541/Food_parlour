@@ -1,15 +1,17 @@
+import { CDN_URL } from "../utils/constants";
+
 const RestCard = ({ resObj }) => {
   if (!resObj) return null;
 
   const {
-    info: { name, cuisines, avgRating, costForTwo },
+    info: { name, cuisines, avgRating, costForTwo, cloudinaryImageId },
   } = resObj;
 
   return (
     <div className="card">
       <img
         className="card-image"
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/1/11/40a20a8d-ec42-461a-b83c-cf8903a69f31_674917.jpg"
+        src={CDN_URL + cloudinaryImageId}
         alt="Cakes"
       />
       <div>
