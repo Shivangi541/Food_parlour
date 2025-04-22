@@ -1,4 +1,5 @@
-# import logo from "./assets/logo.jpg";
+ MockUp of the project
+
 
 - Components of the app
 - - Header: The header of the app
