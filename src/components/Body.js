@@ -1,6 +1,8 @@
 import RestCard from "./RestCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import resObj from "../utils/mockData";
+import { RESTAURANT_API } from "../utils/constants";
+
 const Body = () => {
   const [allres] = useState([
     {
@@ -1011,6 +1013,20 @@ const Body = () => {
     },
   ]);
   const [isFiltered, setFilteredRes] = useState(false);
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const result = await fetch(
+      "/dapi/restaurants/list/v5?lat=22.5796842&lng=88.414312&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    );
+
+    // "/dapi/restaurants/list/v5?lat=22.5796842&lng=88.414312&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    const answer = await result.json();
+    console.log(result);
+    console.log(answer);
+  };
   const handleFilterClick = () => {
     if (isFiltered) {
       // If already filtered, reset to original
