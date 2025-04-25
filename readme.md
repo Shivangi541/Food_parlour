@@ -15,3 +15,4 @@ MockUp of the project
 - we need to import hooks
 - two very important hooks : useState(), useEffect();
   -usestate(): state management
+- conditional rendering: shimmer ui
