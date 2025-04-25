@@ -13,6 +13,14 @@ const Header = () => {
           <li>Contact</li>
           <li>Cart</li>
           <li>Login</li>
+          <button
+            className="login"
+            onClick={() => {
+              console.log("Login button clicked");
+            }}
+          >
+            Login
+          </button>
         </ul>
       </div>
     </div>
