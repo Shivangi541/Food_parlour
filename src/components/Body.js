@@ -1013,20 +1013,22 @@ const Body = () => {
     },
   ]);
   const [isFiltered, setFilteredRes] = useState(false);
+
   useEffect(() => {
-    fetchData();
+    const fetchRes = async () => {
+      try {
+        const data = await fetch(
+          "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.5812837&lng=88.4261513&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+        );
+        const json = await data.json();
+        console.log(json?.data?.cards);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchRes();
   }, []);
-
-  const fetchData = async () => {
-    const result = await fetch(
-      "/dapi/restaurants/list/v5?lat=22.5796842&lng=88.414312&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
-
-    // "/dapi/restaurants/list/v5?lat=22.5796842&lng=88.414312&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    const answer = await result.json();
-    console.log(result);
-    console.log(answer);
-  };
   const handleFilterClick = () => {
     if (isFiltered) {
       // If already filtered, reset to original
