@@ -1,6 +1,6 @@
 import RestCard from "./RestCard";
 import { useState, useEffect } from "react";
-
+import Shimmer from "./Shimmer";
 const Body = () => {
   const [allres] = useState([
     {
@@ -534,7 +534,7 @@ const Body = () => {
     } else {
       // Filter top rated
       const filteredData = allres.filter(
-        (restaurant) => restaurant.info.avgRating > 4.3
+        (restaurant) => restaurant.info.avgRating > 4.5
       );
       setResObj(filteredData);
     }
@@ -542,7 +542,11 @@ const Body = () => {
   };
 
   if (resObj.length === 0) {
-    return <h1>LOADING.....</h1>;
+    return (
+      <div>
+        <Shimmer />
+      </div>
+    );
   }
   return (
     <div className="body">
