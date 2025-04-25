@@ -105,3 +105,22 @@
   cursor: pointer;
   margin: 5px;
 }
+
+.shimmer-wrapper {
+  display: flex;
+
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 16px;
+}
+
+.shimmer {
+  width: 200px;
+  height: 400px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  margin: 5px;
+}
+.login {
+  padding: 0 20px;
+  cursor: pointer;
+}
