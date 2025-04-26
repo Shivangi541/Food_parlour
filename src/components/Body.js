@@ -509,6 +509,7 @@ const Body = () => {
   const [resObj, setResObj] = useState([]);
   const [isFiltered, setFilteredRes] = useState(false);
   const [searchText, setSearchText] = useState("");
+
   useEffect(() => {
     const fetchRes = async () => {
       try {
@@ -562,8 +563,16 @@ const Body = () => {
           <button
             className="search-btn"
             onClick={() => {
-              // filter by category
-              // searchtext
+              const filterres = resObj.filter((res) => {
+                const nameMatch = res?.info?.name
+                  ?.toLowerCase()
+                  .includes(searchText.toLowerCase());
+                const cuisineMatch = res?.info?.cuisines?.some((cuisine) =>
+                  cuisine.toLowerCase().includes(searchText.toLowerCase())
+                );
+                return nameMatch || cuisineMatch;
+              });
+              setResObj(filterres);
               console.log(searchText);
             }}
           >
