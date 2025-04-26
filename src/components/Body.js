@@ -508,7 +508,7 @@ const Body = () => {
   ]);
   const [resObj, setResObj] = useState([]);
   const [isFiltered, setFilteredRes] = useState(false);
-
+  const [searchText, setSearchText] = useState("");
   useEffect(() => {
     const fetchRes = async () => {
       try {
@@ -551,6 +551,25 @@ const Body = () => {
   return (
     <div className="body">
       <div className="filter">
+        <div>
+          <input
+            type="text"
+            placeholder="Search for restaurants"
+            className="search-input"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+          <button
+            className="search-btn"
+            onClick={() => {
+              // filter by category
+              // searchtext
+              console.log(searchText);
+            }}
+          >
+            Search
+          </button>
+        </div>
         <button className="filter-btn" onClick={handleFilterClick}>
           Top rated Restaurants
         </button>
