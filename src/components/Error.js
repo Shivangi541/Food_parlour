@@ -1,3 +1,4 @@
+import { useRouteError } from "react-router";
 const Error = ({ message = "Something went wrong." }) => {
   const containerStyle = {
     display: "flex",
@@ -36,7 +37,8 @@ const Error = ({ message = "Something went wrong." }) => {
     cursor: "pointer",
     fontSize: "1rem",
   };
-
+  const err = useRouteError();
+  console.error(err);
   return (
     <div style={containerStyle}>
       <div style={boxStyle}>
