@@ -36,7 +36,7 @@ const Body = () => {
       setFilteredRes(allres); // Reset to all restaurants
     } else {
       const topRated = allres.filter(
-        (restaurant) => restaurant.info.avgRating > 4.5
+        (restaurant) => restaurant.info.avgRating > 4.4
       );
       setFilteredRes(topRated);
     }
